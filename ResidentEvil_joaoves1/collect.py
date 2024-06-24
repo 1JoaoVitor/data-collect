@@ -104,7 +104,8 @@ df[condicao]
 #achamos quem ta dando problema
 # %%
 
-df.to_parquet("dados_RE.parquet", index= False)
+# df.to_parquet("dados_RE.parquet", index= False)
+df.to_csv("dados_RE.csv", sep=";")
 
 # nesse caso é melhor a transformação em parquet, mais adequado
 # %%
