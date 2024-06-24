@@ -1,6 +1,6 @@
 # %%
 import requests 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 from tqdm import tqdm # biblioteca para ver quando tempo demora algumas ações
 import pandas as pd
 
@@ -36,7 +36,7 @@ def get_basic_infos(soup):
     
     div_page = soup.find("div", class_="td-page-content")
     # busca uma div que tem como class "td-page-content"
-    paragrafo = div_page.find_all("p")[1]
+    paragrafo = div_page.find_all("p")[1] # pega o segundo parágrafo
     ems = paragrafo.find_all("em")
     data = {}
     for i in ems:
